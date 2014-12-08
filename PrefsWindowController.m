@@ -24,11 +24,6 @@
 {
     [NSApp activateIgnoringOtherApps:YES];
     [[self window] setLevel:NSFloatingWindowLevel];
-    NSSize fittingSize=[[[self window] contentView] fittingSize];
-    NSLog(@"frame %@", NSStringFromRect([[self window] frame]));
-    NSLog(@"fitting %@", NSStringFromSize(fittingSize));
-    [[self window] setContentSize:fittingSize];
-    NSLog(@"frame %@", NSStringFromRect([[self window] frame]));
     [[self window] center];
     [super showWindow:sender];
 }
@@ -45,10 +40,10 @@
     return NSLocalizedString(@"Scroll Reverser Preferences", nil);
 }
 - (NSString *)menuStringScrollingAxes {
-    return NSLocalizedString(@"Axes", nil);
+    return NSLocalizedString(@"Scrolling Axes", nil);
 }
 - (NSString *)menuStringScrollingDevices {
-    return NSLocalizedString(@"Devices", nil);
+    return NSLocalizedString(@"Scrolling Devices", nil);
 }
 - (NSString *)menuStringAppSettings {
     return NSLocalizedString(@"App Settings", nil);
@@ -57,7 +52,7 @@
     return NSLocalizedString(@"Check for updates", nil);
 }
 - (NSString *)menuStringCheckNow {
-    return NSLocalizedString(@"Check Now ", nil);
+    return NSLocalizedString(@"Check Now", nil);
 }
 - (NSString *)menuStringStartAtLogin {
     return NSLocalizedString(@"Start at Login", nil);

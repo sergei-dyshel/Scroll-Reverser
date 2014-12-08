@@ -15,21 +15,21 @@
         <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="240" width="420" height="264"/>
+            <rect key="contentRect" x="196" y="240" width="420" height="262"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1050"/>
             <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="420" height="264"/>
+                <rect key="frame" x="0.0" y="0.0" width="420" height="262"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <box autoresizesSubviews="NO" misplaced="YES" title="AXES" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="Ohg-0n-48V">
-                        <rect key="frame" x="17" y="140" width="190" height="74"/>
+                    <box autoresizesSubviews="NO" misplaced="YES" title="DEM AXES" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="Ohg-0n-48V">
+                        <rect key="frame" x="17" y="138" width="190" height="74"/>
                         <view key="contentView">
                             <rect key="frame" x="1" y="1" width="188" height="58"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <button translatesAutoresizingMaskIntoConstraints="NO" id="5vn-uT-jr4">
-                                    <rect key="frame" x="16" y="32" width="121" height="18"/>
-                                    <buttonCell key="cell" type="check" title="Reverse Vertical" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="SIb-gI-p30">
+                                    <rect key="frame" x="16" y="32" width="73" height="18"/>
+                                    <buttonCell key="cell" type="check" title="PLEASE" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="SIb-gI-p30">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                         <font key="font" metaFont="system"/>
                                         <connections>
@@ -43,8 +43,8 @@
                                     </connections>
                                 </button>
                                 <button translatesAutoresizingMaskIntoConstraints="NO" id="jap-mI-Tvu">
-                                    <rect key="frame" x="16" y="12" width="139" height="18"/>
-                                    <buttonCell key="cell" type="check" title="Reverse Horizontal" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="I4A-Jm-TEL">
+                                    <rect key="frame" x="16" y="12" width="112" height="18"/>
+                                    <buttonCell key="cell" type="check" title="AUTOLAYOUT" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="I4A-Jm-TEL">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
@@ -69,15 +69,15 @@
                             <binding destination="-2" name="title" keyPath="self.menuStringScrollingAxes" id="rNG-dI-cKr"/>
                         </connections>
                     </box>
-                    <box autoresizesSubviews="NO" misplaced="YES" title="DEVICES" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="4Gb-8v-3Cg">
-                        <rect key="frame" x="213" y="120" width="190" height="94"/>
+                    <box autoresizesSubviews="NO" misplaced="YES" title="DEM DEVICES" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="4Gb-8v-3Cg">
+                        <rect key="frame" x="213" y="118" width="190" height="94"/>
                         <view key="contentView">
                             <rect key="frame" x="1" y="1" width="188" height="78"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <button translatesAutoresizingMaskIntoConstraints="NO" id="EfG-4T-QIE">
-                                    <rect key="frame" x="16" y="32" width="118" height="18"/>
-                                    <buttonCell key="cell" type="check" title="Reverse Mouse" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="MES-ls-Hf7">
+                                    <rect key="frame" x="16" y="32" width="53" height="18"/>
+                                    <buttonCell key="cell" type="check" title="THIS" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="MES-ls-Hf7">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
@@ -88,8 +88,8 @@
                                     </connections>
                                 </button>
                                 <button translatesAutoresizingMaskIntoConstraints="NO" id="Ba0-5g-aCJ">
-                                    <rect key="frame" x="16" y="52" width="133" height="18"/>
-                                    <buttonCell key="cell" type="check" title="Reverse Trackpad" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="dur-Lw-a5r">
+                                    <rect key="frame" x="16" y="52" width="64" height="18"/>
+                                    <buttonCell key="cell" type="check" title="WORK" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="dur-Lw-a5r">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
@@ -100,8 +100,8 @@
                                     </connections>
                                 </button>
                                 <button translatesAutoresizingMaskIntoConstraints="NO" id="1mQ-tY-tFo">
-                                    <rect key="frame" x="16" y="12" width="113" height="18"/>
-                                    <buttonCell key="cell" type="check" title="Reverse Tablet" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="oZJ-kb-G7t">
+                                    <rect key="frame" x="16" y="12" width="54" height="18"/>
+                                    <buttonCell key="cell" type="check" title="TIME" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="oZJ-kb-G7t">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
@@ -129,8 +129,8 @@
                         </connections>
                     </box>
                     <button misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tei-VY-Z6O">
-                        <rect key="frame" x="128" y="228" width="164" height="18"/>
-                        <buttonCell key="cell" type="check" title="REVERSE SCROLLING" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="gLC-SR-d45">
+                        <rect key="frame" x="162" y="226" width="96" height="18"/>
+                        <buttonCell key="cell" type="check" title="ON OR OFF" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="gLC-SR-d45">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -139,25 +139,26 @@
                             <binding destination="9eJ-Lx-koC" name="value" keyPath="values.InvertScrollingOn" id="abS-4l-uDI"/>
                         </connections>
                     </button>
-                    <box autoresizesSubviews="NO" misplaced="YES" title="APP SETTINGS" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="Nwb-Qq-UGz">
-                        <rect key="frame" x="17" y="18" width="386" height="98"/>
+                    <box autoresizesSubviews="NO" misplaced="YES" title="DEM SETTINGS" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="Nwb-Qq-UGz">
+                        <rect key="frame" x="17" y="16" width="386" height="98"/>
                         <view key="contentView">
                             <rect key="frame" x="1" y="1" width="384" height="82"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <button misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BF6-eM-wfG">
-                                    <rect key="frame" x="16" y="54" width="102" height="20"/>
-                                    <buttonCell key="cell" type="check" title="Start at login" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="AsS-Tq-Xem">
+                                <button misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ORE-9u-GdU">
+                                    <rect key="frame" x="16" y="34" width="183" height="18"/>
+                                    <buttonCell key="cell" type="check" title="CHECK THOSE UPDATES" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="nyd-1s-nqL">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
                                     <connections>
-                                        <binding destination="-2" name="title" keyPath="self.menuStringStartAtLogin" id="yyv-dj-H5E"/>
+                                        <binding destination="-2" name="title" keyPath="self.menuStringCheckForUpdates" id="8lF-MA-4yv"/>
+                                        <binding destination="VQJ-Ng-zSD" name="value" keyPath="self.automaticallyChecksForUpdates" id="e7H-yl-PSb"/>
                                     </connections>
                                 </button>
                                 <button translatesAutoresizingMaskIntoConstraints="NO" id="tHO-we-mOD">
-                                    <rect key="frame" x="16" y="12" width="134" height="18"/>
-                                    <buttonCell key="cell" type="check" title="Show in menu bar" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Jdm-Ne-28V">
+                                    <rect key="frame" x="16" y="12" width="186" height="18"/>
+                                    <buttonCell key="cell" type="check" title="SHOW IN THE MENU BAR" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Jdm-Ne-28V">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
@@ -170,20 +171,19 @@
                                         </binding>
                                     </connections>
                                 </button>
-                                <button translatesAutoresizingMaskIntoConstraints="NO" id="ORE-9u-GdU">
-                                    <rect key="frame" x="16" y="33" width="623" height="18"/>
-                                    <buttonCell key="cell" type="check" title="Check for updates" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="nyd-1s-nqL">
+                                <button misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BF6-eM-wfG">
+                                    <rect key="frame" x="16" y="54" width="183" height="20"/>
+                                    <buttonCell key="cell" type="check" title="START AT LOGIN PLEASE" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="AsS-Tq-Xem">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
                                     <connections>
-                                        <binding destination="-2" name="title" keyPath="self.menuStringCheckForUpdates" id="8lF-MA-4yv"/>
-                                        <binding destination="VQJ-Ng-zSD" name="value" keyPath="self.automaticallyChecksForUpdates" id="e7H-yl-PSb"/>
+                                        <binding destination="-2" name="title" keyPath="self.menuStringStartAtLogin" id="yyv-dj-H5E"/>
                                     </connections>
                                 </button>
                                 <button horizontalHuggingPriority="1000" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WMy-N6-Iet">
-                                    <rect key="frame" x="284" y="28" width="87" height="28"/>
-                                    <buttonCell key="cell" type="push" title="Check Now" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="E90-xb-fTB">
+                                    <rect key="frame" x="225" y="28" width="146" height="28"/>
+                                    <buttonCell key="cell" type="push" title="CHECK NOW WILL YA" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="E90-xb-fTB">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="smallSystem"/>
                                     </buttonCell>
@@ -201,6 +201,7 @@
                             <constraint firstItem="tHO-we-mOD" firstAttribute="top" secondItem="ORE-9u-GdU" secondAttribute="bottom" constant="7" id="bxk-yu-cbK"/>
                             <constraint firstItem="BF6-eM-wfG" firstAttribute="top" secondItem="Nwb-Qq-UGz" secondAttribute="top" constant="25" id="fTt-Jh-QuI"/>
                             <constraint firstItem="ORE-9u-GdU" firstAttribute="top" secondItem="BF6-eM-wfG" secondAttribute="bottom" constant="7" id="hmD-y7-Mbs"/>
+                            <constraint firstItem="WMy-N6-Iet" firstAttribute="leading" secondItem="ORE-9u-GdU" secondAttribute="trailing" priority="50" constant="33" placeholder="YES" id="qYJ-fK-htN"/>
                             <constraint firstItem="ORE-9u-GdU" firstAttribute="centerX" secondItem="WMy-N6-Iet" secondAttribute="centerX" id="rJj-m5-Zrw"/>
                             <constraint firstItem="tHO-we-mOD" firstAttribute="leading" secondItem="Nwb-Qq-UGz" secondAttribute="leading" constant="16" id="shV-Cy-Og4"/>
                             <constraint firstItem="BF6-eM-wfG" firstAttribute="leading" secondItem="Nwb-Qq-UGz" secondAttribute="leading" constant="16" id="ylW-uN-cwA"/>
@@ -231,7 +232,7 @@
             <connections>
                 <binding destination="-2" name="title" keyPath="self.menuStringSRPreferences" id="Cgj-GV-cVu"/>
             </connections>
-            <point key="canvasLocation" x="-280" y="-251"/>
+            <point key="canvasLocation" x="-185" y="-252"/>
         </window>
         <customObject id="VQJ-Ng-zSD" customClass="SUUpdater"/>
         <userDefaultsController representsSharedInstance="YES" id="9eJ-Lx-koC"/>
