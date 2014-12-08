@@ -46,7 +46,6 @@
 		011A628519D49AB7003CE6DC /* insert_version.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = insert_version.sh; path = BuildScripts/insert_version.sh; sourceTree = "<group>"; };
 		011A628619D49B69003CE6DC /* ReleaseNotes.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ReleaseNotes.md; sourceTree = "<group>"; };
 		011A628919D4A748003CE6DC /* IntroShot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IntroShot.png; path = Graphics/IntroShot.png; sourceTree = "<group>"; };
-		011A628A19D4A748003CE6DC /* IntroShot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "IntroShot@2x.png"; path = "Graphics/IntroShot@2x.png"; sourceTree = "<group>"; };
 		011A628F19D4AABE003CE6DC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = resources/en.lproj/WelcomeWindow.xib; sourceTree = "<group>"; };
 		0158730C134DD1FA00CD9CC4 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = resources/en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0158730D134DD1FA00CD9CC4 /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = en; path = resources/en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -103,7 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				011A628919D4A748003CE6DC /* IntroShot.png */,
-				011A628A19D4A748003CE6DC /* IntroShot@2x.png */,
 				01B5ABCA1700D26200FF6F6A /* ScrollInverterStatusIcon.png */,
 				01B5ABDA1700D50600FF6F6A /* ScrollInverterStatusIcon@2x.png */,
 				01B5ABD21700D26C00FF6F6A /* ScrollInverterIcon.icns */,
