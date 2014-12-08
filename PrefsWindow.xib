@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
@@ -41,8 +41,8 @@
                                         </connections>
                                     </buttonCell>
                                     <connections>
-                                        <binding destination="9eJ-Lx-koC" name="enabled" keyPath="values.InvertScrollingOn" id="h1f-d0-uUT"/>
                                         <binding destination="-2" name="title" keyPath="self.menuStringVertical" id="TGZ-8e-CX2"/>
+                                        <binding destination="9eJ-Lx-koC" name="enabled" keyPath="values.InvertScrollingOn" id="h1f-d0-uUT"/>
                                         <binding destination="9eJ-Lx-koC" name="value" keyPath="values.ReverseY" id="vZQ-T8-jkh"/>
                                     </connections>
                                 </button>
@@ -53,8 +53,8 @@
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
                                     <connections>
-                                        <binding destination="9eJ-Lx-koC" name="enabled" keyPath="values.InvertScrollingOn" id="KMw-we-aon"/>
                                         <binding destination="-2" name="title" keyPath="self.menuStringHorizontal" id="e0E-6e-CkU"/>
+                                        <binding destination="9eJ-Lx-koC" name="enabled" keyPath="values.InvertScrollingOn" id="KMw-we-aon"/>
                                         <binding destination="9eJ-Lx-koC" name="value" keyPath="values.ReverseX" id="3Yg-pK-sE3"/>
                                     </connections>
                                 </button>
@@ -86,8 +86,8 @@
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
                                     <connections>
-                                        <binding destination="9eJ-Lx-koC" name="enabled" keyPath="values.InvertScrollingOn" id="sty-hZ-m2b"/>
                                         <binding destination="-2" name="title" keyPath="self.menuStringMouse" id="6NV-LZ-K6f"/>
+                                        <binding destination="9eJ-Lx-koC" name="enabled" keyPath="values.InvertScrollingOn" id="sty-hZ-m2b"/>
                                         <binding destination="9eJ-Lx-koC" name="value" keyPath="values.ReverseMouse" id="FuO-Wq-UO5"/>
                                     </connections>
                                 </button>
@@ -98,8 +98,8 @@
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
                                     <connections>
-                                        <binding destination="9eJ-Lx-koC" name="enabled" keyPath="values.InvertScrollingOn" id="irh-7k-JOG"/>
                                         <binding destination="-2" name="title" keyPath="self.menuStringTrackpad" id="dgX-gJ-DLn"/>
+                                        <binding destination="9eJ-Lx-koC" name="enabled" keyPath="values.InvertScrollingOn" id="irh-7k-JOG"/>
                                         <binding destination="9eJ-Lx-koC" name="value" keyPath="values.ReverseTrackpad" id="NnQ-NX-ahR"/>
                                     </connections>
                                 </button>
@@ -110,8 +110,8 @@
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
                                     <connections>
-                                        <binding destination="9eJ-Lx-koC" name="enabled" keyPath="values.InvertScrollingOn" id="ECp-Uo-egW"/>
                                         <binding destination="-2" name="title" keyPath="self.menuStringTablet" id="LnB-RO-7b5"/>
+                                        <binding destination="9eJ-Lx-koC" name="enabled" keyPath="values.InvertScrollingOn" id="ECp-Uo-egW"/>
                                         <binding destination="9eJ-Lx-koC" name="value" keyPath="values.ReverseTablet" id="ciA-Tj-qNU"/>
                                     </connections>
                                 </button>
@@ -156,8 +156,8 @@
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
                                     <connections>
-                                        <binding destination="-2" name="title" keyPath="self.menuStringCheckForUpdates" id="8lF-MA-4yv"/>
                                         <binding destination="VQJ-Ng-zSD" name="value" keyPath="self.automaticallyChecksForUpdates" id="e7H-yl-PSb"/>
+                                        <binding destination="-2" name="title" keyPath="self.menuStringCheckForUpdates" id="8lF-MA-4yv"/>
                                     </connections>
                                 </button>
                                 <button translatesAutoresizingMaskIntoConstraints="NO" id="tHO-we-mOD">
@@ -183,6 +183,7 @@
                                     </buttonCell>
                                     <connections>
                                         <binding destination="-2" name="title" keyPath="self.menuStringStartAtLogin" id="yyv-dj-H5E"/>
+                                        <binding destination="-2" name="value" keyPath="self.appDelegate.loginItemsController.startAtLogin" id="dAl-Sa-f5j"/>
                                     </connections>
                                 </button>
                                 <button horizontalHuggingPriority="1000" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WMy-N6-Iet">
@@ -236,10 +237,9 @@
             <connections>
                 <binding destination="-2" name="title" keyPath="self.menuStringSRPreferences" id="Cgj-GV-cVu"/>
             </connections>
-            <point key="canvasLocation" x="-241" y="-354"/>
+            <point key="canvasLocation" x="-864" y="-894"/>
         </window>
         <customObject id="VQJ-Ng-zSD" customClass="SUUpdater"/>
         <userDefaultsController representsSharedInstance="YES" id="9eJ-Lx-koC"/>
-        <customObject id="S4b-bp-To3" customClass="LoginItemsController"/>
     </objects>
 </document>

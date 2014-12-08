@@ -88,7 +88,6 @@ NSString *const PrefsHideIcon=@"HideIcon";
         welcomeWindowController=[[WelcomeWindowController alloc] initWithWindowNibName:@"WelcomeWindow"];
         [welcomeWindowController showWindow:self];
 	}
-    [self showPrefs:self];
 	[tap start];
 }
 

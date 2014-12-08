@@ -5,10 +5,12 @@
 //  Created by Nicholas Moore on 08/12/2014.
 //
 //
+@class ScrollInverterAppDelegate;
 
 #import <Cocoa/Cocoa.h>
 
 @interface PrefsWindowController : NSWindowController
+@property (readonly) ScrollInverterAppDelegate *appDelegate;
 @property (readonly) NSString *menuStringReverseScrolling;
 @property (readonly) NSString *menuStringSRPreferences;
 @property (readonly) NSString *menuStringScrollingAxes;
