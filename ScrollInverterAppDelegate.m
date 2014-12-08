@@ -111,6 +111,7 @@ NSString *const PrefsHideIcon=@"HideIcon";
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication hasVisibleWindows:(BOOL)flag
 {
 	[[NSUserDefaults standardUserDefaults] setBool:NO forKey:PrefsHideIcon];
+    [statusController openMenu];
 	return NO;
 }
 
@@ -121,13 +122,10 @@ NSString *const PrefsHideIcon=@"HideIcon";
 		[NSApp activateIgnoringOtherApps:YES];
         NSAlert *alert=[NSAlert alertWithMessageText:NSLocalizedString(@"Status Icon Hidden",nil)
                                        defaultButton:NSLocalizedString(@"OK",nil)
-                                     alternateButton:NSLocalizedString(@"Restore Now",nil)
+                                     alternateButton:nil
                                          otherButton:nil
                            informativeTextWithFormat:NSLocalizedString(@"MENU_HIDDEN_TEXT", @"text shown when the menu bar icon is hidden")];
-        const unsigned long button=[alert runModal];
-        if (button==NSAlertAlternateReturn) {
-            [[NSUserDefaults standardUserDefaults] setBool:NO forKey:PrefsHideIcon];
-        }
+        [alert runModal];
     }    
 }
 

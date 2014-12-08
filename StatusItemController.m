@@ -126,4 +126,11 @@
     [_statusItem setMenu:_theMenu];
 }
 
+- (void)openMenu
+{
+    if (_theMenu) {
+        [_statusItem popUpStatusItemMenu:_theMenu];
+    }
+}
+
 @end
