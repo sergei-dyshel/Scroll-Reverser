@@ -106,8 +106,26 @@ static CGEventRef eventTapCallback(CGEventTapProxy proxy,
         {
             // how many fingers on the trackpad?
             NSEvent *ev=[NSEvent eventWithCGEvent:event];
-            tap->fingers=[[ev touchesMatchingPhase:NSTouchPhaseTouching inView:nil] count];
-            //NSLog(@"fingers %lu", tap->fingers);
+            
+            // fingers on the pad...
+            NSSet *touching=[ev touchesMatchingPhase:NSTouchPhaseTouching inView:nil];
+            if ([touching count]>0) {
+                [tap->touches removeAllObjects]; // avoid stale data
+                for (NSTouch *touch in touching) {
+                    [tap->touches addObject:[touch identity]];
+                }
+            }
+            
+            // fingers removed from the pad...
+            NSSet *ended=[ev touchesMatchingPhase:NSTouchPhaseEnded|NSTouchPhaseCancelled inView:nil];
+            for (NSTouch *touch in ended) {
+                [tap->touches removeObject:[touch identity]];
+            }
+            
+            NSLog(@"touches %@", tap->touches);
+            tap->fingers=[tap->touches count];
+            
+            NSLog(@"fingers %lu", tap->fingers);
         }
         else if (type==NSScrollWheel)
         {
@@ -232,9 +250,11 @@ static CGEventRef eventTapCallback(CGEventTapProxy proxy,
     // should we hook gesture events
     const BOOL touchAvailable=[NSEvent instancesRespondToSelector:@selector(touchesMatchingPhase:inView:)];
     const CGEventMask touchMask=touchAvailable?NSEventMaskGesture:0;
+    
+    touches=[NSMutableSet set];
 
 	// create mach port
-	port = (CFMachPortRef)CGEventTapCreate(kCGSessionEventTap,
+	port=(CFMachPortRef)CGEventTapCreate(kCGSessionEventTap,
 										   kCGTailAppendEventTap,
 										   kCGEventTapOptionDefault,
 										   CGEventMaskBit(kCGEventScrollWheel)|CGEventMaskBit(kCGEventTabletProximity)|touchMask,
@@ -257,6 +277,7 @@ static CGEventRef eventTapCallback(CGEventTapProxy proxy,
 	CFRelease(port);
 	source=nil;
 	port=nil;
+    touches=nil;
 }
 
 - (void)enableTap:(BOOL)state
