@@ -122,10 +122,8 @@ static CGEventRef eventTapCallback(CGEventTapProxy proxy,
                 [tap->touches removeObject:[touch identity]];
             }
             
-            NSLog(@"touches %@", tap->touches);
             tap->fingers=[tap->touches count];
-            
-            NSLog(@"fingers %lu", tap->fingers);
+            //NSLog(@"fingers %lu", tap->fingers);
         }
         else if (type==NSScrollWheel)
         {
