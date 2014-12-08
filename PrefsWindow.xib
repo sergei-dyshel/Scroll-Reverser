@@ -15,11 +15,15 @@
         <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="240" width="420" height="262"/>
+            <rect key="contentRect" x="196" y="240" width="420" height="260"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1050"/>
             <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="420" height="262"/>
+                <rect key="frame" x="0.0" y="0.0" width="420" height="260"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <userGuides>
+                    <userLayoutGuide location="20" affinity="minX"/>
+                    <userLayoutGuide location="400" affinity="minX"/>
+                </userGuides>
                 <subviews>
                     <box autoresizesSubviews="NO" misplaced="YES" title="DEM AXES" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="Ohg-0n-48V">
                         <rect key="frame" x="17" y="138" width="190" height="74"/>
@@ -216,23 +220,23 @@
                 <constraints>
                     <constraint firstAttribute="centerX" secondItem="Tei-VY-Z6O" secondAttribute="centerX" id="8Ii-uO-u1U"/>
                     <constraint firstItem="Ohg-0n-48V" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="8jk-Vo-gwc"/>
+                    <constraint firstAttribute="bottom" secondItem="Nwb-Qq-UGz" secondAttribute="bottom" constant="20" id="BFa-JC-CTZ"/>
                     <constraint firstItem="Nwb-Qq-UGz" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="D1f-ba-tly"/>
                     <constraint firstItem="Nwb-Qq-UGz" firstAttribute="top" secondItem="4Gb-8v-3Cg" secondAttribute="bottom" constant="8" id="LZc-hZ-J0o"/>
                     <constraint firstAttribute="trailing" secondItem="4Gb-8v-3Cg" secondAttribute="trailing" constant="20" id="NXv-Jf-8rw"/>
                     <constraint firstAttribute="trailing" secondItem="Nwb-Qq-UGz" secondAttribute="trailing" constant="20" id="RD4-Iq-JBc"/>
                     <constraint firstItem="4Gb-8v-3Cg" firstAttribute="leading" secondItem="Ohg-0n-48V" secondAttribute="trailing" constant="12" id="RtO-IB-qOz"/>
-                    <constraint firstItem="Ohg-0n-48V" firstAttribute="top" secondItem="Tei-VY-Z6O" secondAttribute="bottom" constant="16" id="Y5b-g8-NUC"/>
-                    <constraint firstItem="4Gb-8v-3Cg" firstAttribute="top" secondItem="Tei-VY-Z6O" secondAttribute="bottom" constant="16" id="cSX-Sl-3hB"/>
+                    <constraint firstItem="Ohg-0n-48V" firstAttribute="top" secondItem="Tei-VY-Z6O" secondAttribute="bottom" constant="14" id="Y5b-g8-NUC"/>
+                    <constraint firstItem="4Gb-8v-3Cg" firstAttribute="top" secondItem="Tei-VY-Z6O" secondAttribute="bottom" constant="14" id="cSX-Sl-3hB"/>
                     <constraint firstItem="4Gb-8v-3Cg" firstAttribute="top" secondItem="Ohg-0n-48V" secondAttribute="top" id="kpE-jZ-Gbz"/>
                     <constraint firstItem="4Gb-8v-3Cg" firstAttribute="width" secondItem="Ohg-0n-48V" secondAttribute="width" id="oOE-LQ-ciL"/>
-                    <constraint firstItem="Tei-VY-Z6O" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="20" id="vUP-Xm-Voh"/>
-                    <constraint firstAttribute="bottom" secondItem="Nwb-Qq-UGz" secondAttribute="bottom" constant="20" id="zVB-KB-Ct3"/>
+                    <constraint firstItem="Tei-VY-Z6O" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="18" id="vUP-Xm-Voh"/>
                 </constraints>
             </view>
             <connections>
                 <binding destination="-2" name="title" keyPath="self.menuStringSRPreferences" id="Cgj-GV-cVu"/>
             </connections>
-            <point key="canvasLocation" x="-185" y="-252"/>
+            <point key="canvasLocation" x="-241" y="-354"/>
         </window>
         <customObject id="VQJ-Ng-zSD" customClass="SUUpdater"/>
         <userDefaultsController representsSharedInstance="YES" id="9eJ-Lx-koC"/>

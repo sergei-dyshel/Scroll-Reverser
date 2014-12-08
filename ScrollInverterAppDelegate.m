@@ -103,6 +103,7 @@ NSString *const PrefsHideIcon=@"HideIcon";
 
 - (IBAction)showAbout:(id)sender
 {
+    [prefsWindowController close];
 	[NSApp activateIgnoringOtherApps:YES];
     NSDictionary *dict=@{@"ApplicationName": @"Scroll Reverser"};
     [NSApp orderFrontStandardAboutPanelWithOptions:dict];
