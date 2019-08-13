@@ -212,11 +212,11 @@ static CGEventRef callback(CGEventTapProxy proxy,
                 const BOOL reverseX=[[NSUserDefaults standardUserDefaults] boolForKey:PrefsReverseHorizontal];
                 const BOOL reverseY=[[NSUserDefaults standardUserDefaults] boolForKey:PrefsReverseVertical];
                 if (reverseY) CGEventSetIntegerValueField(event, kCGScrollWheelEventDeltaAxis1, -line_axis1);
-                if (reverseX) CGEventSetIntegerValueField(event, kCGScrollWheelEventDeltaAxis2, -line_axis2);
+                if (reverseX) CGEventSetIntegerValueField(event, kCGScrollWheelEventDeltaAxis2, 0);
                 if (reverseY) CGEventSetDoubleValueField(event, kCGScrollWheelEventFixedPtDeltaAxis1, -1 * fixedpt_axis1);
-                if (reverseX) CGEventSetDoubleValueField(event, kCGScrollWheelEventFixedPtDeltaAxis2, -1 * fixedpt_axis2);
+                if (reverseX) CGEventSetDoubleValueField(event, kCGScrollWheelEventFixedPtDeltaAxis2, 0);
                 if (reverseY) CGEventSetIntegerValueField(event, kCGScrollWheelEventPointDeltaAxis1, -pixel_axis1);
-                if (reverseX) CGEventSetIntegerValueField(event, kCGScrollWheelEventPointDeltaAxis2, -pixel_axis2);
+                if (reverseX) CGEventSetIntegerValueField(event, kCGScrollWheelEventPointDeltaAxis2, 0);
             }
         }
         else
