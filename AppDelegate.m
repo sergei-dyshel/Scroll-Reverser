@@ -10,7 +10,6 @@
 #import "DebugWindowController.h"
 #import "TestWindowController.h"
 #import "TapLogger.h"
-#import <Sparkle/SUUpdater.h>
 
 NSString *const PrefsReverseScrolling=@"InvertScrollingOn";
 NSString *const PrefsReverseHorizontal=@"ReverseX";
@@ -79,16 +78,6 @@ void *kContextReverseScrolling=&kContextReverseScrolling;
     return alreadyRunning;
 }
 
-- (NSURL *)feedURL
-{
-    if ([[self.appVersion componentsSeparatedByString:@"-"] count]>1) { // if version string has a dash, it's a beta
-        return [NSURL URLWithString:@"https://rink.hockeyapp.net/api/2/apps/4eb70fe73a84cb8cd252855a6d7b1bb3"];
-    }
-    else {
-        return [NSURL URLWithString:@"https://softwareupdate.pilotmoon.com/update/scrollreverser/appcast.xml"];
-    }
-}
-
 - (id)init
 {
     self=[super init];
@@ -108,8 +97,6 @@ void *kContextReverseScrolling=&kContextReverseScrolling;
             statusController.visible=![[NSUserDefaults standardUserDefaults] boolForKey:PrefsHideIcon];
             [[NSUserDefaults standardUserDefaults] addObserver:self forKeyPath:PrefsHideIcon options:0 context:kContextHideIcon];
             
-            [[SUUpdater sharedUpdater] setDelegate:self];
-            [[SUUpdater sharedUpdater] setFeedURL:[self feedURL]];
         }
     }
     return self;
@@ -280,14 +267,6 @@ void *kContextReverseScrolling=&kContextReverseScrolling;
 - (void)statusItemAltClicked
 {
     [self showDebug:self];
-}
-
-#pragma mark Sparkle delegate methods
-
-- (NSArray *)feedParametersForUpdater:(SUUpdater *)updater sendingSystemProfile:(BOOL)sendingProfile
-{
-    NSLog(@"Checking for updates at %@", [updater feedURL]);
-    return [NSArray array];
 }
 
 #pragma mark App info

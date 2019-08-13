@@ -30,8 +30,6 @@
 		01E6A6CF1A42E6BF00C1FB2A /* ScrollReverser.iconset in Resources */ = {isa = PBXBuildFile; fileRef = 01E6A6CE1A42E6BF00C1FB2A /* ScrollReverser.iconset */; };
 		01EB78C41324D574005390BD /* MouseTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EB78C21324D574005390BD /* MouseTap.m */; };
 		01ED37DF1A375EB9001B3094 /* LinkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01ED37DE1A375EB9001B3094 /* LinkView.m */; };
-		01F66862174B5E43001727DE /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F66861174B5E43001727DE /* Sparkle.framework */; };
-		01F66865174B5E77001727DE /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 01F66861174B5E43001727DE /* Sparkle.framework */; };
 		256AC3DA0F4B6AC300CF3369 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* AppDelegate.m */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -44,7 +42,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				01F66865174B5E77001727DE /* Sparkle.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +101,6 @@
 		01EB78C31324D574005390BD /* MouseTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MouseTap.h; sourceTree = "<group>"; };
 		01ED37DD1A375EB9001B3094 /* LinkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkView.h; sourceTree = "<group>"; };
 		01ED37DE1A375EB9001B3094 /* LinkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkView.m; sourceTree = "<group>"; };
-		01F66861174B5E43001727DE /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		01FD192E1B1C81D000489C3F /* hu */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = hu; path = resources/hu.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -125,7 +121,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
-				01F66862174B5E43001727DE /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,7 +241,6 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				01F66861174B5E43001727DE /* Sparkle.framework */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
@@ -264,7 +258,6 @@
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
 				01F66864174B5E6D001727DE /* CopyFiles */,
-				01F668AD174B9A65001727DE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -285,7 +278,6 @@
 				LastUpgradeCheck = 1010;
 				TargetAttributes = {
 					8D1107260486CEB800E47090 = {
-						DevelopmentTeam = 6W6K75YWQ9;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -315,6 +307,7 @@
 				"zh-CN",
 				nb,
 				sv,
+				ja,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* Scroll Inverter */;
 			projectDirPath = "";
@@ -345,22 +338,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		01F668AD174B9A65001727DE /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# insert the version string from git into the app\n${SRCROOT}/BuildScripts/insert_version.sh noclean 10000\n\nNM_FRAMEWORKS_PATH=\"$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH\"\necho \"Frameworks path is $NM_FRAMEWORKS_PATH\"\n\n# shrink sparkle\nSPARKLE_PATH=\"$NM_FRAMEWORKS_PATH/Sparkle.framework\"\necho \"Removing spurious files from $SPARKLE_PATH\"\nrm -rf \"$SPARKLE_PATH/Headers\"\nrm -rf \"$SPARKLE_PATH/Versions/Current/Headers\"\nrm -rf \"$SPARKLE_PATH/Resources/ca.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/cs.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/cy.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/da.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/el.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/fi.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/fr_CA.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/he.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/hu.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/id.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/is.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/nl.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/no.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/pl.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/ro.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/sk.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/sl.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/sv.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/th.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/tr.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/uk.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/ar.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/de.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/es.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/fr.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/it.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/ja.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/ko.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/pt.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/pt_BR.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/pt_PT.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/ru.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/zh_CN.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/zh_TW.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/finish_installation.app/Contents/Resources/Sparkle.icns\"\nrm -rf \"$SPARKLE_PATH/Resources/finish_installation.app/Contents/Resources/ca.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/finish_installation.app/Contents/Resources/cs.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/finish_installation.app/Contents/Resources/cy.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/finish_installation.app/Contents/Resources/da.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/finish_installation.app/Contents/Resources/el.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/finish_installation.app/Contents/Resources/fi.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/finish_installation.app/Contents/Resources/he.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/finish_installation.app/Contents/Resources/hu.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/finish_installation.app/Contents/Resources/id.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/finish_installation.app/Contents/Resources/is.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/finish_installation.app/Contents/Resources/nl.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/finish_installation.app/Contents/Resources/no.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/finish_installation.app/Contents/Resources/pl.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/finish_installation.app/Contents/Resources/ro.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/finish_installation.app/Contents/Resources/sk.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/finish_installation.app/Contents/Resources/sl.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/finish_installation.app/Contents/Resources/sv.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/finish_installation.app/Contents/Resources/th.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/finish_installation.app/Contents/Resources/tr.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/finish_installation.app/Contents/Resources/uk.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/finish_installation.app/Contents/Resources/ar.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/finish_installation.app/Contents/Resources/de.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/finish_installation.app/Contents/Resources/es.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/finish_installation.app/Contents/Resources/fr.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/finish_installation.app/Contents/Resources/it.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/finish_installation.app/Contents/Resources/ja.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/finish_installation.app/Contents/Resources/ko.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/finish_installation.app/Contents/Resources/pt.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/finish_installation.app/Contents/Resources/pt_BR.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/finish_installation.app/Contents/Resources/pt_PT.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/finish_installation.app/Contents/Resources/ru.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/finish_installation.app/Contents/Resources/zh_CN.lproj\"\nrm -rf \"$SPARKLE_PATH/Resources/finish_installation.app/Contents/Resources/zh_TW.lproj\"\n\necho \"Finished removing files\"\n\n# sign everything\ncodesign -f -v -s \"Developer ID Application: Nicholas Moore\" \"$SPARKLE_PATH/Resources/finish_installation.app\"\ncodesign -f -v -s \"Developer ID Application: Nicholas Moore\" \"$SPARKLE_PATH/Versions/A\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D11072C0486CEB800E47090 /* Sources */ = {
@@ -419,12 +396,12 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 10006;
 				DEPLOYMENT_POSTPROCESSING = NO;
-				DEVELOPMENT_TEAM = 6W6K75YWQ9;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -454,12 +431,12 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 10006;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_POSTPROCESSING = YES;
-				DEVELOPMENT_TEAM = 6W6K75YWQ9;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -506,6 +483,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 10006;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -547,6 +525,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 10006;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
