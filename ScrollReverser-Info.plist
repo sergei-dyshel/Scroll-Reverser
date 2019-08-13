@@ -40,5 +40,7 @@
 	<false/>
 	<key>SUEnableSystemProfiling</key>
 	<false/>
+	<key>NSAppleEventsUsageDescription</key>
+	<string></string>
 </dict>
 </plist>
